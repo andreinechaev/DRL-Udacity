@@ -42,9 +42,10 @@ Follow the instructions in `Navigation.ipynb` to get started with training your 
 
 To solve the environment DQN method was chosen. DQN resembles Q-learning with the difference that Neural Networks are used instead of Q-table.
 DQN architecture consists of 2 neural networks:
-   - Online network - used for constant learning
-   - Target network - used for delayed update and calculation of the Temporal Difference error (TD) using a loss function
- 
+
+- Online network - used for constant learning
+- Target network - used for delayed update and calculation of the Temporal Difference error (TD) using a loss function
+
 Both networks use the same architecture and share weight. For the given task a simple linear network with 3 hidden layers was created.
  
 ```text
