@@ -63,14 +63,14 @@ Where _/ - ReLu
 Over experimentation it was decided to update the Target network every 10 episodes.
 For the Loss 2 functions were considered MSE and L1 Smooth. When the last showed better results through series of runs.
 
-[loss](plots/loss_per_episode.png)
+![loss](plots/loss_per_episode.png)
 
 As an optimizer there were inconclusive results between Adam and SGD. It is very likely due to inability to seed random to the environment.
 Adam, once, showed good results in just 300 episodes. But after similar results couldn't be achieved.
 SGD achieved the goal in less than 1800 episodes.
 It is worth noting that SGD shows a smoother incline in performance, when Adam tends to drop unexpectedly.
 
-[reward history](plots/rewards_per_episode.png)
+![reward history](plots/rewards_per_episode.png)
 
 Performance was affected by two main factors. Replay Buffer and Epsilon value.
 When the same architecture with a Replay Buffer of size 10000 works well on base gym environment (i.e. CartPole-v1) more complex environments,
@@ -78,13 +78,13 @@ such as the one considered here, require a larger buffer to keep the target for 
 
 For the Epsilon decay an exponential decay with a long tail was chosen. It is motivated by the longevity of episodes.
 
-[epsilon decay](plots/eps_decay.png)
+![epsilon decay](plots/eps_decay.png)
 
 Slower Epsilon decay serves like a good regularization. Therefore helps to prevent overfitting by adding distributed noise to data.
 
 To achieve the best result early stop was used. Parametrized by the GOAL+2 over at least 15 consecutive episodes.
 
-[eval history](plots/eval_hist.png)
+![eval history](plots/eval_hist.png)
 
 
 ### (Optional) Challenge: Learning from Pixels
