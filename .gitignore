@@ -1,4 +1,7 @@
 .vscode
 *.zip
-Banana_Linux/
+*_Linux/
 *.log
+.x86*
+.app
+.exe
